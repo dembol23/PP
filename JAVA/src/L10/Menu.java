@@ -1,5 +1,8 @@
 package L10;
 
+import L10.Decoration.Decoration;
+import L10.Decoration.DecorationFactory;
+import L10.Decoration.DecorationType;
 import L10.Decoration.UnknownDecorationException;
 import java.util.Scanner;
 
@@ -45,7 +48,11 @@ public class Menu {
 
     private boolean decorateLoop() {
         while (true) {
-            System.out.print("Wybierz dekorację (Bubbles, Lights, Angel, Chain), 'exit' aby zakończyć, 'new' żeby stworzyć nowe drzewo: ");
+            System.out.print("Dostępne dekoracje: ");
+            for (DecorationType type : DecorationType.values()) {
+                System.out.print(type.name() + " ");
+            }
+            System.out.print("\nWybierz dekorację (lub 'exit'/'new'): ");
             String input = scanner.nextLine();
             if (input.equalsIgnoreCase("exit")) {
                 return false;
@@ -54,7 +61,8 @@ public class Menu {
                 return true;
             }
             try {
-                tree.decorate(input);
+                Decoration decoration = DecorationFactory.getDecoration(input);
+                tree.decorate(decoration);
                 System.out.println("Choinka po dekoracji (" + input + "):");
                 System.out.println(tree);
             } catch (UnknownDecorationException e) {

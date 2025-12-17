@@ -13,9 +13,8 @@ public abstract class ChristmasTree {
 
     abstract void generateTree();
 
-    void decorate(String name) {
-        Decoration dec = getDecoration(name);
-        tree = dec.decorate(tree);
+    void decorate(Decoration decoration) {
+        tree = decoration.decorate(tree);
     }
 
     @Override

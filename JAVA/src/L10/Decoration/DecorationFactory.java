@@ -1,12 +1,5 @@
 package L10.Decoration;
 
-enum DecorationType {
-    BUBBLES,
-    LIGHTS,
-    ANGEL,
-    CHAIN
-}
-
 public class DecorationFactory {
     public static Decoration getDecoration(String name) {
         DecorationType type;
