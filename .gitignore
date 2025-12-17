@@ -1,0 +1,47 @@
+### Systemowe (macOS) ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### IntelliJ IDEA / JetBrains (wspólne dla Java i Scala) ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### JAVA ###
+# Skompilowane klasy
+*.class
+
+# Folder wyjściowy IntelliJ
+out/
+
+# Logi
+*.log
+
+# Pliki archiwów (opcjonalnie, jeśli nie chcesz ich trzymać)
+*.jar
+*.war
+*.ear
+
+### SCALA / SBT ###
+target/
+.bsp/
+project/target/
+project/project/
+.scala-build/
+
+### OCAML ###
+# Artefakty kompilacji
+_build/
+*.cmo
+*.cmi
+*.cma
+*.cmx
+*.cmxa
+*.o
+*.a
+
+# Pliki konfiguracyjne narzędzi OCaml
+.merlin
+dune-project
