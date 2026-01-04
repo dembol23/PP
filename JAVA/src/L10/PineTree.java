@@ -4,6 +4,9 @@ import static L10.main.treeChar;
 
 public class PineTree extends ChristmasTree {
     public PineTree(int height) {
+        if (height < 1) {
+            throw new IllegalArgumentException("Height must be greater than 1");
+        }
         super(height);
     }
 

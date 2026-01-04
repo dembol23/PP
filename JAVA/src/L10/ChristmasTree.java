@@ -2,8 +2,6 @@ package L10;
 
 import L10.Decoration.Decoration;
 
-import static L10.Decoration.DecorationFactory.getDecoration;
-
 public abstract class ChristmasTree {
     int height;
     String[] tree;
