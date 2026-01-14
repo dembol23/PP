@@ -25,5 +25,8 @@ public class main {
 
         System.out.println("\n--- Test 3: String (Systemowy) ---");
         debug.fields("Test");
+
+        System.out.println("\n--- Test 4: null ---");
+        debug.fields(null);
     }
 }

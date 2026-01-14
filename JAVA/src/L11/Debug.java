@@ -7,6 +7,10 @@ public class Debug {
     public Debug(){}
 
     void fields(Object objectGiven) {
+        if (objectGiven == null) {
+            System.out.println("Obiekt jest nullem");
+            return;
+        }
         Class<?> objectClass = objectGiven.getClass();
         System.out.println("Klasa: " + objectClass.getSimpleName());
         for (Field i: objectClass.getDeclaredFields()) {
